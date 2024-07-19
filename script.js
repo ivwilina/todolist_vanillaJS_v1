@@ -59,7 +59,7 @@ const reload = () => {
 const addNewList = () => {
   const d = new Date();
   const tempdate = d
-    .toLocaleDateString()
+    .toLocaleString()
     .replaceAll(/[&\/\\#, +()$~%.'":*?<>{}]/g, "");
   const date = d.toISOString().split("T");
   const newId = `${tempdate}`;
