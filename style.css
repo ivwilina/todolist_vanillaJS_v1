@@ -1,0 +1,267 @@
+@font-face {
+  font-family: Lato;
+  src: url(./Lato/Lato-Regular.ttf) format(truetype);
+  font-weight: normal;
+}
+
+* {
+  font-family: 'Lato';
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  margin: 0;
+}
+
+body img {
+  width: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-bar {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.4rem 0;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg,
+      hsl(58, 77%, 86%),
+      hsl(121, 80%, 86%),
+      hsl(314, 93%, 89%),
+      hsl(26, 69%, 83%),
+      hsl(0, 67%, 81%));
+}
+
+.title-bar>p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+}
+
+.user-welcome {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.widget {
+  font-size: 1rem;
+}
+
+.date {
+  font-size: 0.7rem;
+  margin: 0.2rem 0;
+}
+
+.add-list {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.add-list-button {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  border-radius: 7px;
+  padding: 0.3rem;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.add-list-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.lists-view {
+  display: inline-block;
+  width: 100%;
+}
+
+.list {
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.list .date>input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+
+.list-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.list-title>input {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list-goals {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list-title {
+  font-weight: bold;
+}
+
+.list-goals .add-goal {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.list-goals .add-goal>input {
+  width: 100%;
+  padding: 0.2rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  text-transform: none;
+}
+
+.list-goals .add-goal>input:focus {
+  outline: none;
+}
+
+.list-goals>li {
+  width: 100%;
+  font-size: 1rem;
+  text-transform: none;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.list-goals>li img {
+  position: absolute;
+  width: 0.7rem;
+  right: 0.2rem;
+  top: 0.2rem;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.list-goals>li:hover img {
+  opacity: 1;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.done::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: 0.3rem;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  height: 0.7rem;
+  width: 0.3rem;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.pending::before {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  left: 0rem;
+  border: 2px solid #000;
+  border-radius: 2px;
+  height: 0.7rem;
+  width: 0.7rem;
+  transition: all 0.5s;
+}
+
+
+[class*="col-"] {
+  float: left;
+  width: 100%;
+  margin: 5px 10px 0 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-m-1 {
+    width: 50%;
+  }
+
+  .col-m-2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .col-l-1 {
+    width: 33%;
+  }
+
+  .col-l-2 {
+    width: 66%;
+  }
+
+  .col-l-3 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 25%;
+  }
+
+  .col-xl-2 {
+    width: 50%;
+  }
+
+  .col-xl-3 {
+    width: 75%;
+  }
+
+  .col-xl-4 {
+    width: 100%;
+  }
+}

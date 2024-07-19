@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body onload="onload()">
+  <div class="wrapper">
+    <div class="title-bar" onclick="clrAll()">
+      <p>busy day</p>
+    </div>
+    <div class="container">
+      <div class="user-welcome">
+        <div class="welcome-text">
+          hello, lamina
+        </div>
+        <div class="widget">
+          <div class="date" id="current-date">
+          </div>
+        </div>
+      </div>
+      <div class="add-list">
+        <div class="add-list-button col-m-1 col-l-1 col-xl-1" onclick="addNewList()">
+          + add new list
+        </div>
+      </div>
+      <div class="lists-view" id="lists-view">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
