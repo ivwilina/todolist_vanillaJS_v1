@@ -18,6 +18,30 @@ const clrAll = () => {
   location.reload();
 };
 
+
+const randomChars = () => {
+  const Char = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
+                'o','p','q','r','s','t','u','v','w','x','y','z','1','2',
+                '3','4','5','6','7','8','9','0'];
+  const ranRange = Char.length;
+  let genString = "";
+  for (let index = 0; index < 16; index++) {
+    const ranNum = Math.floor(Math.random()*ranRange);
+    genString += Char[ranNum];
+  }
+  return genString;
+}
+
+const idGenerate = () => {
+  let generatedId = randomChars();
+  const checkId = false;
+  todoList.forEach(list => {
+    if(list.id===generatedId) checkId=true;
+  });
+  if(checkId) idGenerate();
+  else return generatedId;
+}
+
 const reload = () => {
   const listsView = document.getElementById("lists-view");
   let html = todoList
@@ -58,11 +82,8 @@ const reload = () => {
 
 const addNewList = () => {
   const d = new Date();
-  const tempdate = d
-    .toLocaleString()
-    .replaceAll(/[&\/\\#, +()$~%.'":*?<>{}]/g, "");
   const date = d.toISOString().split("T");
-  const newId = `${tempdate}`;
+  const newId = idGenerate();
   const newTitle = "new list";
   const newDate = date[0];
   const newGoals = [];
